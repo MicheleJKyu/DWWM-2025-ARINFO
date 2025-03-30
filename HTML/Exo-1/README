@@ -1,0 +1,18 @@
+Exercice pratique HTML - ARINFO - 24-03-2025 - 1ere page : 
+
+Création d'une page web simple
+Objectif : Mettre en pratique les balises HTML de base que vous avez apprises.
+Consignes :
+Créez une page HTML complète respectant les critères suivants :
+Utilisez la structure HTML complète : <html>, <head>, <title> et <body>.
+Dans le <head>, ajoutez un titre de page pertinent.
+Dans le corps (<body>), ajoutez :
+o    Un titre principal avec la balise <h1>
+o    Deux sous-titres avec la balise <h2>
+o    Deux paragraphes avec la balise <p>
+o    Une liste non ordonnée (<ul>) contenant trois éléments (<li>)
+o    Une image avec la balise <img> (utilisez une URL externe pour l'image)
+o    Un lien hypertexte (<a>) pointant vers un site web externe (ex. Wikipédia)
+Bonus :
+•    Ajoutez une liste ordonnée (<ol>) avec trois éléments.
+•    Utilisez la balise <em> pour mettre en emphase du texte dans un paragraphe.
