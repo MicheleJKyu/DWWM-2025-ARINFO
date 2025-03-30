@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Les balises html</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Les Balises HTML</h1>
+    <h2>Exercice 2 - Formation Arinfo - Mars 2025.</h2>
+
+    <!-- Tableau 1 : Balises du head -->
+    <table>
+        <tbody>
+            <tr>
+                <th colspan="5">Tableau 1 : Balises du head.</th>
+            </tr>
+            <tr>
+                <th>Balise</th>
+                <th>Description</th>
+                <th>Type de la balise</th>
+                <th>Balise auto fermante</th>
+                <th>Attributs principaux obligatoires</th>
+            </tr>
+
+            <tr>
+                <td>&lt;Link&gt;</td>
+                <td>Définit la relation entre le document courant et une ressource externe.</td>
+                <td>Inline</td>
+                <td>Oui</td>
+                <td>href,rel</td>
+            </tr>
+
+            <tr>
+                <td>&lt;meta&gt;</td>
+                <td>Représente toute information de métadonnées qui ne peut pas être représentée par un des autres éléments de métadonnées.</td>
+                <td>Inline</td>
+                <td>Non</td>
+                <td>type</td>
+            </tr>
+
+            <tr>
+                <td>&lt;script&gt;</td>
+                <td>Il est généralement utilisé pour intégrer ou référencer du code JavaScript.</td>
+                <td>Inline/block</td>
+                <td>Non</td>
+                <td>scr, type</td>
+            </tr>
+
+            <tr>
+                <td>&lt;style&gt;</td>
+                <td>Contient des informations de mise en forme CSS.</td>
+                <td>Block</td>
+                <td>Non</td>
+                <td>type</td>
+            </tr>
+
+            <tr>
+                <td>&lt;title&gt;</td>
+                <td>Définit le titre du document.</td>
+                <td>Inline</td>
+                <td>Non</td>
+                <td>-</td>    
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Tableau 2 : Balises de structuration du squelette d’une page web -->
+    <table>
+        <tbody>
+        <tr>
+            <th colspan="5">Tableau 2 : Balises de structuration du squelette d’une page web.</th>
+        </tr>
+        <tr>
+            <th>Balise</th>
+            <th>Description</th>
+            <th>Type de la balise</th>
+            <th>Balise auto fermante</th>
+            <th>Attributs principaux obligatoires</th>
+        </tr>
+
+        <tr>
+            <td>&lt;header&gt;</td>
+            <td>Entête de la page.</td>
+            <td>Block</td>
+            <td>Non</td>
+            <td>-</td> 
+        </tr>
+        <tr>
+            <td>&lt;nav&gt;</td>
+            <td>Zone de navigation.</td>
+            <td>Block</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;footer&gt;</td>
+            <td>Représente le pied de page de la section ou de la racine de sectionnement la plus proche.</td>
+            <td>Block</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;section&gt;</td>
+            <td>Représente une section générique.</td>
+            <td>Block</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;article&gt;</td>
+            <td>Contenu Independant.</td>
+            <td>Block</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;aside&gt;</td>
+            <td>Représente une partie d'un document dont le contenu n'a qu'un rapport indirect avec le contenu principal du document.</td>
+            <td>Block</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+    </tbody>
+    </table>
+
+    <!-- Tableau 3 : Balises de structuration du contenu d’une page web -->
+    <table>
+        <tbody>
+        <tr>
+            <th colspan="5">Tableau 3 : Balises de structuration du contenu d’une page web.</th>
+        </tr>
+        <tr>
+            <th>Nom</th>
+            <th>Description</th>
+            <th>Type de la balise</th>
+            <th>Balise auto fermante</th>
+            <th>Attributs principaux obligatoires</th>
+        </tr>
+        <tr>
+            <td>&lt;blockquote&gt;</td>
+            <td>Structure une section de contenu qui est citée d'un autre document ou d'une autre source.</td>
+            <td>Block</td>
+            <td>Non</td>
+            <td>cite, p, q</td>
+        </tr>
+        <tr>
+            <td>&lt;abbr&gt;</td>
+            <td>Représente une abréviation ou un acronyme.</td>
+            <td>Inline</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;strong&gt;</td>
+            <td>Indique que le texte a une importance particulière ou un certain sérieux voire un caractère urgent.</td>
+            <td>Inline</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;small&gt;</td>
+            <td>Permet de représenter des commentaires ou des textes à écrire en petits caractères.</td>
+            <td>Inline</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;h1,h2,h3,h4,h5,h6&gt;</td>
+            <td>Balises titres qui permettent de hiérarchiser la structure d'un texte sur le web.</td>
+            <td>Inline</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;figure&gt;</td>
+            <td>Représente un contenu autonome, éventuellement accompagné d'une légende facultative,
+                qui est spécifiée à l'aide de l'élément "figcaption". Souvent lié à une image ou un extrait de code.
+            </td>
+            <td>Block</td>
+            <td>Non</td>
+            <td>figcaption, blockquote, cite, pre, p, </td>
+        </tr>
+        <tr>
+            <td>&lt;figcaption&gt;</td>
+            <td>Représente une légende ou une légende décrivant le reste du contenu de son élément parent "figure",
+                fournissant à "figure" une description accessible.
+            </td>
+            <td>Inline</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;img&gt;</td>
+            <td>Sert à intégrer des images dans une page Web.</td>
+            <td>Inline</td>
+            <td>Oui</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>&lt;svg&gt;</td>
+            <td>Un fichier SVG est un type de format utilisé pour définir des graphiques bidimensionnels pour le web et basé sur XLM.</td>
+            <td>Inline</td>
+            <td>Oui</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;audio&gt;</td>
+            <td>Permet d'intégrer du contenu sonore dans un document, comme de la musique ou d'autres flux audio.</td>
+            <td>Inline</td>
+            <td>Non</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>&lt;video&gt;</td>
+            <td>La balise &lt;video&gt; permet d'intégrer du contenu vidéo dans un document, comme un extrait vidéo ou d'autres flux vidéo.</td>
+            <td>Inline</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;a&gt;</td>
+            <td>&lt;a&gt; (pour ancre ou anchor en anglais), avec son attribut href , crée un lien hypertexte vers des pages web, des fichiers,
+                des adresses e-mail, des emplacements se trouvant dans la même page, ou tout ce qu'une URL peut adresser.
+            </td>
+            <td>Inline</td>
+            <td>Oui</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;p&gt;</td>
+            <td>Permettent de définir un paragraphe.</td>
+            <td>Block</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;br&gt;</td>
+            <td>Permet un retour à la ligne (jusqu'à la marge gauche) sans création de nouveau paragraphe.</td>
+            <td>Inline</td>
+            <td>Oui</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;hr&gt;</td>
+            <td>Cette balise permet de tracer un trait de séparation dans le texte.</td>
+            <td>Inline</td>
+            <td>Oui</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;del&gt;</td>
+            <td>Représente une portion de texte ayant été supprimée d'un document.</td>
+            <td>Inline</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;progress&gt;</td>
+            <td>Indique l'état de complétion d'une tâche.</td>
+            <td>Block</td>
+            <td>Non</td>
+            <td>id, max, value</td>
+        </tr>
+        <tr>
+            <td>&lt;iframe&gt;</td>
+            <td>Élément HTML qui permet d'intégrer un contenu externe dans une page web.</td>
+            <td>Block</td>
+            <td>Non</td>
+            <td>id, title, width, height, scr</td>
+        </tr>
+        <tr>
+            <td>&lt;ul&gt;</td>
+            <td>Représente une liste d'éléments sans ordre particulier.</td>
+            <td>Block</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;li&gt;</td>
+            <td>Permet de passer à l'élément suivant dans une liste.</td>
+            <td>Block</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;ol&gt;</td>
+            <td>Représente une liste ordonnée.</td>
+            <td>Block</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;dl&gt;</td>
+            <td>Fournit la description, la définition ou la valeur du terme précédent "dt" dans une liste de description.</td>
+            <td>Block</td>
+            <td>Non</td>
+            <td>dt, dd</td>
+        </tr>
+        <tr>
+            <td>&lt;dt&gt;</td>
+            <td>Identifie un terme dans une liste de définitions ou de descriptions.</td>
+            <td>Inline</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;dd&gt;</td>
+            <td>Fournit la description, la définition ou la valeur du terme précédent "dt" dans une liste de description "dl".</td>
+            <td>Inline</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+    </tbody>
+    </table>
+
+    <!-- Tableau 4 : Balises de mise en forme non sémantique d’une page web. -->
+    <table>
+        <tbody>
+        <tr>
+            <th colspan="5">Tableau 4 : Balises de mise en forme non sémantique d’une page web.</th>
+        </tr>
+        <tr>
+            <th>Balise</th>
+            <th>Description</th>
+            <th>Type de la balise</th>
+            <th>Balise auto fermante</th>
+            <th>Attributs principaux obligatoire</th>
+        </tr>
+
+        <tr>
+            <td>&lt;span&gt;</td>
+            <td>c'est une balise conteneur en ligne utilisé pour marquer une partie d'un texte ou d'un document.</td>
+            <td>Inline</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;div&gt;</td>
+            <td>L'élément HTML "div" (ou division) est le conteneur générique du contenu du flux.</td>
+            <td>Block</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+    </tbody>
+    </table>
+
+    <!-- Tableau 5 : Balises de construction d’un tableau -->
+    <table>
+        <tbody>
+        <tr>
+            <th colspan="5">Tableau 5 : Balises de construction d’un tableau.</th>
+        <tr>
+            <th>Balise</th>
+            <th>Description</th>
+            <th>Type de la balise</th>
+            <th>Balise auto fermante</th>
+            <th>Attributs principaux obligatoires</th>
+        </tr>
+
+        <tr>
+            <td>&lt;table&gt;</td>
+            <td>Représente des données tabulaires, c'est-à-dire des informations présentées sous forme de tableau.</td>
+            <td>Block</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;tr&gt;</td>
+            <td>Représente une ligne d'un tableau.</td>
+            <td>Block</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;td&gt;</td>
+            <td>Représente une cellule de données dans un tableau.</td>
+            <td>Inline</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;th&gt;</td>
+            <td>Représente une cellule d'en-tête dans un tableau.</td>
+            <td>Inline</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;thead&gt;</td>
+            <td>Représente l'ensemble des lignes d'en-tête d'un tableau.</td>
+            <td>Block</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;tbody&gt;</td>
+            <td>Représente l'ensemble des lignes de corps d'un tableau.</td>
+            <td>Block</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+    </tbody>
+    </table>
+
+    <!-- Tableau 6 : Balises de construction d’un formulaire -->
+    <table>
+        <tbody>
+        <tr>
+            <th colspan="5">Tableau 6 : Balises de construction d’un formulaire.</th>
+        </tr>
+        <tr>
+            <th>Balise</th>
+            <th>Description</th>
+            <th>Type de la balise</th>
+            <th>Balise auto fermante</th>
+            <th>Attributs principaux obligatoire</th>
+        </tr>
+
+        <tr>
+            <td>&lt;form&gt;</td>
+            <td>Représente un formulaire, consistant en des contrôles interactifs permettant à l'utilisateur d'envoyer des données à un serveur web.</td>
+            <td>Block</td>
+            <td>Non</td>
+            <td>action, method</td>
+        </tr>
+        <tr>
+            <td>&lt;input&gt;</td>
+            <td>Permet à l'utilisateur de saisir des données.</td>
+            <td>Inline</td>
+            <td>Oui</td>
+            <td>type, name</td>
+        </tr>
+        <tr>
+            <td>&lt;textarea&gt;</td>
+            <td>Permet à l'utilisateur de saisir des données multi-lignes.</td>
+            <td>Block</td>
+            <td>Non</td>
+            <td>Name</td>
+        </tr>
+        <tr>
+            <td>&lt;button&gt;</td>
+            <td>Permet à l'utilisateur d'activer un contrôle ou d'envoyer un formulaire.</td>
+            <td>Inline</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;select&gt;</td>
+            <td>Permet à l'utilisateur de sélectionner une ou plusieurs options.</td>
+            <td>Inline</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;option&gt;</td>
+            <td>Représente une option dans un élément "select".</td>
+            <td>Inline</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;label&gt;</td>
+            <td>Définit une étiquette pour un élément "input".</td>
+            <td>Inline</td>
+            <td>Non</td>
+            <td>for</td>
+        </tr>
+        <tr>
+            <td>&lt;fieldset&gt;</td>
+            <td>Permet de regrouper des éléments d'un formulaire avec une légende.</td>
+            <td>Block</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>&lt;legend&gt;</td>
+            <td>Définit une légende pour un élément "fieldset".</td>
+            <td>Inline</td>
+            <td>Non</td>
+            <td>-</td>
+        </tr>
+    </tbody>
+    </table>
+</body>
+</html>
