@@ -1,0 +1,556 @@
+/* suppression de la mise en page web par défault */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Barre de navigation */
+header {
+    min-height: 5vh;
+    max-height: fit-content;
+    width: 100vw;
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    position: fixed;
+}
+
+main {
+    /* Ajuste selon la hauteur du header */
+    padding-top: 5vh;
+}
+
+/* Image logo de Patachou */
+#logo-header {
+    height: 5vh;
+}
+
+#logo-img {
+    width: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+#menu-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    width: 100%;
+    padding: 20px;
+    padding-right: 20px;
+    font-weight: 500;
+}
+
+#menu-list li {
+    padding: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    color: #000;
+    font-size: 1.2em;
+    font-family: 'Kaisei Decol', sans-serif;
+}
+
+
+li a {
+    text-decoration: none;
+    color: inherit;
+    text-transform: capitalize;
+    font-weight: 1000;
+}
+
+#home {
+    color: #AB864C;
+}
+
+#home:hover {
+    color: #AB864C;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #AB864C;
+    text-decoration: underline;
+}
+
+#banner {
+    height: 50vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    padding-bottom: 1%;
+}
+
+#banner img {
+    height: 100%;
+    width: 100vw;
+    object-fit: cover;
+    display: block;
+}
+
+#quote p {
+    font-size: 2em;
+    font-family: 'Kaisei Decol', sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+
+/* article top-content : citation de Maupassant */
+#top-content {
+    display: flex;
+    font-size: 1em;
+    font-family: 'Kaisei Decol', sans-serif;
+    color: #000;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 4%;
+}
+
+#top-text {
+    font-family: 'poppins', sans-serif;
+    font-size: 1.150em;
+    color: #000;
+    text-align: center;
+    margin: 5px auto;
+    margin-bottom: 5%;
+    padding: 35px 55px 35px 55px;  
+    max-width: 40%;
+    border: #000 solid 1.3px;
+}
+
+#skills {
+    background-color: #AB864C;
+    padding: 20px;
+}
+
+#middle-top-coentent h2{
+    font-family: 'Kaisei Decol', sans-serif;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#middle-title {
+    font-family: 'Kaisei Decol', sans-serif;
+    font-size: 2.5em;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+#top-content h2 {
+    font-family: 'kaisei decol', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 2px;
+}
+
+#middle-top-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+#middle-top-content div.pastry-content {
+    font-family: 'kaisei decol', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 50px;
+    padding: 15px;
+    width: 100%;
+    max-width: 300px;
+    gap: 60px;
+    height: auto;
+    color: #fff;
+}
+
+#middle-top-content div.pastry-content h3 {
+    font-family: 'kaisei decol', sans-serif;
+    font-size: 1.5em;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#middle-top-content div.pastry-content p {
+    font-family: 'kaisei decol', sans-serif;
+    font-size: 1.2em;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 345px;
+}
+
+#middle-top-content div.pastry-content img {
+    color: #fff;
+    text-align: center;
+    margin: 10px 0;
+    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+
+}
+
+.button-one {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 4vw;
+}
+
+.button-one a {
+    font-family: 'kaisei decol', sans-serif;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #AB864C;
+    color: #fff;
+    text-decoration: none;
+    border: #fff solid 1px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.button-one a:hover {
+    background-color: #fff;
+    color: #AB864C;
+    text-decoration: none;
+}
+
+
+/* Article middle : histoire de Patachou */
+#middle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px auto;
+    padding: 40px;
+    margin-top: 30px;
+    max-width: 60%;
+}
+
+#poche-douille {
+    width: 35%;
+    height: auto;
+    margin: 20px 0;
+    padding: 20px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+#quote {
+    display: flex;
+    width: 50px;
+    height: auto;
+}
+
+#middle-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+#middle-text h2 {
+    font-family: 'Kaisei Decol', sans-serif;
+    color: #000;
+    font-size: 2.5em;
+    text-align: left;
+    margin-bottom: 20px;
+    width: 100%;    
+    line-height: 1.2;
+    display: inline-flex;
+    align-items: baseline;
+}
+
+#middle-text h2::after {
+    content: '...';
+    font-weight: normal;
+    display: inline;
+    white-space: nowrap;
+}
+
+#middle-text p {
+    font-family: 'Kaisei Decol', sans-serif;
+    color: #000;
+    display: flex;
+    text-align: left;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#button-two {
+    margin-top: 30px;
+}
+
+#button-two a {
+    font-family: 'Kaisei Decol', sans-serif;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #AB864C;
+    color: #fff;
+    text-decoration: none;
+    border: #fff solid 1px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+#button-two a:hover {
+    background-color: #fff;
+    border: #AB864C solid 1px;
+    color: #AB864C;
+    text-decoration: none;
+}
+
+/* article middle bottom : Texte de proposition, appel à la commande et forumaire de contact */
+#middle-bottom {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 40px 0;
+    padding-left: 60px;
+    padding: 20px;
+    align-items: flex-start
+}
+
+#text-asside-form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px 20px 370px;
+    padding: 40px;
+    max-width: 33%;
+}
+
+/*h2 id event de la section : texte à coté du formaulaire */
+#event {
+    font-family: "Kaisei Decol", sans-serif;
+    font-size: 3em;
+}
+
+/* paragraphe du text asside form : texte à coté du formulaire*/
+#text-asside-form p {
+    font-family: 'Kaisei Decol', sans-serif;
+    font-size: 1rem;
+    margin: 20px 0;
+}
+
+/* formulaire de contact */
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 500px;
+    margin: 10px;
+    margin-left: 20px;
+    padding: 20px;
+    padding-top: 100px;
+}
+
+#form-label {
+    font-family: 'Kaisei Decol', 'poppins', sans-serif;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+#form input {
+    font-family: 'kaisei decol', 'poppins', sans-serif;
+    font-size: 1em;
+    margin-bottom: 5px;
+    max-width: 100%;
+    padding: 3px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+#form-input,
+#form-textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#form-label {
+    font-family: 'Kaisei Decol', sans-serif;
+    font-size: 2em;
+    margin-right: 10px;
+}
+
+#name-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+#third-child,
+#fourth-child {
+    display: flex;
+    flex-direction: column;
+}
+
+#fifth-child {
+    display: -webkit-inline-box;
+}
+
+#form input:focus, #form textarea:focus {
+    border-color: #AB864C;
+    outline: none;
+}
+
+/* Style de la checkbox */
+#form input[type="checkbox"] {
+    display: flex;
+    transform: scale(1.4);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/*boutton envoyer du formulaire*/
+#form button {
+    padding: 15px 198px;
+    font-size: 1rem;
+    font-family: 'Kaisei Decol', sans-serif;
+    background-color: #AB864C;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/*animation au passage de souris : hover*/
+#form button:hover {
+    background-color: #fff;
+    color: #AB864C;
+    border: 1px solid #AB864C;
+}
+
+/* article bottom : Adresse de Patachou et carte google */
+#bottom-content {
+    background-color: #AB864C;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+    padding-top: 40px;
+}
+
+#bottom-content h2 {
+    font-family: 'Kaisei Decol', sans-serif;
+    color: #fff;
+    font-size: 3.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#bottom-content p {
+    font-family: 'Kaisei Decol', sans-serif;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#bottom-content iframe {
+    width: 100vw;
+    height: 50vh;
+    border: none;
+    margin-top: 20px;
+}
+
+/* footer */
+footer {
+    font-family: 'Kaisei Decol', sans-serif;
+    background-color: #000;
+    padding: 40px;
+    color: #fff;
+    font-size: 0.8em;
+}
+
+#footer-content ul li {
+    list-style: none;
+}
+
+#footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: justify;
+    margin: 10px 0;
+    padding: 40px;
+    color: #fff;
+    font-size: 1em;
+}
+
+#logo-footer {
+    filter: brightness(1) invert(1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+}
+
+/* MEntions légales de Patachou */
+#footer-legal {
+    font-family: 'Kaisei Decol', sans-serif;
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+    border: #AB864C solid 1px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    left: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #logo-header {
+        height: 5vh;
+    }
+
+    #menu-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    #form {
+        padding: 15px;
+    }
+}
