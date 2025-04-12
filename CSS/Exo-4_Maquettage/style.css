@@ -27,7 +27,8 @@ html, body {
 
 header {
     padding-bottom: 10px;
-    min-height: 80px;
+    min-height: 5vh;
+    max-height: fit-content;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -198,12 +199,13 @@ img.basket:hover {
 h2.subtitle-two {
     font-size: 3rem;
     font-family: 'ClaireHand', 'sans-serif';
+    text-transform: uppercase;
     margin-bottom: 15px;
 }
 
 p.intro {
     font-size: 2.5rem;
-    font-family: 'Muli-Regular', 'sans-serif';
+    font-family: 'Muli', 'sans-serif';
     margin-bottom: 15px;
     color: #000;
 }
@@ -296,15 +298,15 @@ div.content-three:hover {
 h3.subtitle-three {
     font-size: 1.3rem;
     margin: 10px 0;
-    font-family: 'Muli-Regular', sans-serif;
+    font-family: 'Muli', sans-serif;
 }
 
 p.content-text {
     font-size: 1.1rem;
-    font-family: 'Muli-Regular', 'sans-serif';
+    font-family: 'Muli', 'sans-serif';
     margin: 0 auto;
     text-align: justify;
-    font-family: 'Muli-Regular', 'sans-serif';
+    font-family: 'Muli', 'sans-serif';
 }
 
 footer {
@@ -316,7 +318,7 @@ footer {
 }
 
 div.credits {
-    font-family: 'Muli-Regular', 'sans-serif';
+    font-family: 'Muli', 'sans-serif';
     font-size: 1.2rem;
     margin-left: 100px;
 }
@@ -325,26 +327,26 @@ p.contact {
     font-size: 1.2rem;
     padding: 25px;
     margin-left: 150px;
-    font-family: 'Muli-Regular', 'sans-serif';
+    font-family: 'Muli', 'sans-serif';
 }
 
 p.text {
     font-size: 1.2rem;
     margin: 0 auto;
     padding-bottom: 15px;
-    font-family: 'Muli-Regular', 'sans-serif';
+    font-family: 'Muli', 'sans-serif';
 }
 
 p.source {
     font-size: 1.2rem;
     padding: 15px;
-    font-family: 'Muli-Regular', 'sans-serif';
+    font-family: 'Muli', 'sans-serif';
 }
 
 div.license {
     padding: 2px;
     text-align: center;
-    font-family: 'Muli-Regular', 'sans-serif';
+    font-family: 'Muli', 'sans-serif';
     font-size: 1.2rem;
 }
 

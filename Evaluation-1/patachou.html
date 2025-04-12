@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- Métadonnées et liens vers les polices et styles -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,25 +15,28 @@
 </head>
 <body>
     <header>
+        <!-- Barre de navigation avec logo et menu -->
         <nav>
             <div id="logo-header">
-                <img src="/images/logo.svg" alt="Logo de PATACHOU" id="logo-img">
+                <a href="#banner" id="home"><img src="/images/logo.svg" alt="Logo de PATACHOU" id="logo-img"></a>
             </div>
             <div id="menu">
                 <ul id="menu-list">
-                    <li><a href="patachou.html" id="home">Accueil</a></li>
-                    <li><a href="#skills">Notre savoir-faire</a></li>
-                    <li><a href="#services">Nos pâtisseries</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#banner" id="home">Accueil</a></li>
+                    <li><a href="#top">Notre savoir-faire</a></li>
+                    <li><a href="#middle-top-content">Nos pâtisseries</a></li>
+                    <li><a href="#middle-bottom">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
     <main>
         <article id="banner">
+            <!-- Bannière principale avec une image -->
                 <img src="/images/HAUTE-COUTURE.jpg" alt="Bannière de la page d'acceuil - PATACHOU" >
         </article>
         <article id="top">
+            <!-- Section avec la citation de Maupassant -->
             <div id="top-content">
                 <h2>“De toutes les passions, la seule vraiment respectable me parait être la gourmandise.”</h2>
                 <p><strong>Guy de Maupassant</strong></p>
@@ -43,7 +47,8 @@
                     sans colorants ni d’arômes artificiels, nos créations mettent en avant la pureté des saveurs.</p>
             </div>
         </article>
-        <article id="skills">
+        <article id="second-top"><a href="#services"></a>
+            <!-- Section "Nos pâtisseries Signature" -->
             <div id="middle-top-content">
                 <h2 id="middle-title">Nos pâtisseries Signature</h2>
                 <div class="pastry-content">
@@ -76,6 +81,7 @@
             </div>
         </article>
         <article id="middle">
+            <!-- Section "Histoire de Patachou" -->
             <img src="/images/poche-douille_histoire-patachou.png" alt="gâteau en cours de préparation avec une poche à douille" id="poche-douille">
             <div id="middle-text">
                 <img src="/images/quote.svg" alt="quote guillemets" id="quote">
@@ -90,8 +96,10 @@
                 </div>
             </div>
         </article>
-        <article id="middle-bottom">
-            <div id="text-asside-form">
+        <article id="middle-bottom" id="contact">
+            <!-- Section "Contact" avec formulaire -->
+            <div id="text-asside-form">  
+                <a href="#contact"></a>
                 <h2 id="event">Des gâteaux <br>pour votre événement ?</h2>
                 <p>Pour vos événements exclusifs – anniversaire, séminaire d’entreprise ou réception privée – offrez à vos invités une sélection
                     raffinée de pâtisseries, biscuits, mignardises et tartes, soigneusement élaborés pour sublimer chaque moment !
@@ -126,6 +134,7 @@
                 </form>
         </article>
         <article id="bottom">
+            <!-- Section "Adresse et carte Google" -->
             <div id="bottom-content">
                 <h2>Notre atelier et notre boutique</h2>
                 <p>14 Boulevard Yvonne Poirel 49000 ANGERS</p>
@@ -136,6 +145,7 @@
         </article>
     </main>
     <footer>
+        <!-- Footer avec informations, horaires et réseaux sociaux -->
             <section id="footer-content">
                 <div id="footer-logo">
                     <img src="/images/logo.svg" alt="Logo de PATACHOU" id="logo-footer">
@@ -163,8 +173,8 @@
                 <div id="media">
                     <h3>Suivez-nous</h3>
                     <ul id="social-media">
-                        <li><a href="#"><img src="/images/facebook.svg" alt="Logo Facebook"></a></li>
-                        <li><a href="#"><img src="/images/instagram.svg" alt="Logo Instagram"></a></li>
+                        <li><a href="https://www.facebook.com/?locale=fr_FR"><img src="/images/facebook.svg" alt="Logo Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/"><img src="/images/instagram.svg" alt="Logo Instagram"><i class="fa-brands fa-facebook"></i></a></li>
                     </ul>
                 </div>
             </section>
