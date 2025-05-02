@@ -1,0 +1,39 @@
+@mixin button-colors($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+}
+
+.buttons {
+    @include flex-center;
+    gap: 20px;
+    margin: 20px;
+}
+
+.primary-button, .secondary-button {
+    @include button-colors($primary-color, white);
+    @include border-radius(5px);
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    &:hover {
+        background-color: darken($secondary-color, 30%);
+    }
+}
+
+.secondary-button {
+    @include button-colors($secondary-color, black);
+    @include border-radius(5px);
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+}

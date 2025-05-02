@@ -1,0 +1,38 @@
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px;
+}
+
+.primary-button, .secondary-button {
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+.primary-button:hover, .secondary-button:hover {
+  background-color: #124f2c;
+}
+
+.secondary-button {
+  background-color: #2ecc71;
+  color: black;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+.secondary-button:hover {
+  background-color: #217dbb;
+}/*# sourceMappingURL=style.css.map */
