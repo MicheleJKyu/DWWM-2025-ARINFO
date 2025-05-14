@@ -1,0 +1,29 @@
+@mixin responsive($breakpoint) {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}
+h1 {
+    font-size: 2rem;
+    @include responsive(768px) {
+        font-size: 2rem;
+    }
+
+    @include responsive(480px) {
+        font-size: 1.5rem;
+    }
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    min-width: 150px;
+    @include responsive(768px) {
+        max-width: 70%;
+        min-width: 135px;
+    }
+    @include responsive(480px) {
+        max-width: 90%;
+        min-width: 135px;
+    }
+}

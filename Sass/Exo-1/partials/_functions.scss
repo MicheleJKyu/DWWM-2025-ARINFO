@@ -1,0 +1,9 @@
+@use "sass:math";
+
+@function adjust($color, $amount) {
+    @if $amount > 0 {
+        @return lighten($color, $amount);
+    } @else {
+        @return darken($color, abs($amount));
+    }
+}

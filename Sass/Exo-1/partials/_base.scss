@@ -1,0 +1,89 @@
+body {
+    color : $text-color;
+    header {
+        @include flex-center;
+        flex-direction: column;
+        border-radius: 20px;
+        margin: 20px;
+        background-color: $primary-color;
+        border: 1px solid #{darken($primary-color, 20%)};
+        text-align: center;
+        padding: 20px 70px;
+    }
+
+    .box {
+        @include flex-center; 
+        height: 200px;
+        background-color: mix($primary-color, $secondary-color, 50%); 
+        border: 1px solid #{darken($primary-color, 20%)}; 
+        margin: 20px;
+        border-radius: 20px;
+    }
+
+    .container {
+        padding: 20px;
+        
+            h1 {
+                font-size: 2rem;
+                text-transform: uppercase;
+                color: black;
+                font-size: 2rem;
+                text-align: center;
+                margin: 20px 0;
+            }
+        
+            p {
+                line-height: 1.6;
+                color: black;
+                font-size: 1.2rem;
+                text-align: center;
+                margin: 10px 0;
+            }
+        }
+    }
+
+    main {
+        .card {
+            @include flex-center;
+            flex-direction: column;
+            background-color: adjust($area-color, -15%);
+            border: 1px solid #{darken($primary-color, 20%)};
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 10px auto;
+            @include border-radius(10px);
+            max-width: 38%;
+            h2 {
+                color: #{darken($text-color, 10%)};
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+                border-radius: 20px;
+                padding: 10px;
+                text-align: center;
+            }
+            h3 {
+                color: $text-color;
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+                border-radius: 20px;
+                padding: 10px;
+                text-align: center;
+            }
+            img {
+                max-width: 36%;
+                height: auto;
+                align-items: center;
+                padding: 10px;
+            }
+        }
+    }
+
+    footer {
+        @include border-radius(20px);
+        background-color: adjust($secondary-color, -10%); // Utilisation de la fonction personnalisée
+        text-align: center;
+        padding: 10px;
+        margin: 20px auto;
+        max-width: 50%;
+        background-color: lighten($secondary-color, 40%);
+}

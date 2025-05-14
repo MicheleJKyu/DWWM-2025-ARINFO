@@ -1,0 +1,16 @@
+@keyframes scale-up {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.02);
+    }
+}
+
+.card {
+    transition: transform 0.3s ease;
+    cursor: pointer; // Change le curseur au survol
+    &:hover {
+        animation: scale-up 0.3s forwards;
+    }
+}
