@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    min-height: 250vh;
+    margin-top: 20px;
+}
+
+#logo {
+    transition: opacity 0.8s ease-in-out;
+    display: block;
+    margin: 0 auto;
+    bottom: 10px;
+    left: 50%;
+    width: 35%;
+    height: auto;
+}
+
+#fuji {
+    top: 10px;
+    transition: top 1.2s, bottom 1.2s ease-in-out;
+    width: 15%;
+    height: auto;
+    position: fixed;
+    left: 10px;
+    z-index: 1000;
+}
+
+p {
+    max-width: 85ch;
+    margin: 0 auto;
+    padding: 6ch;
+    text-align: center;
+    background-color: blanchedalmond;
+    border-radius: 15px;
+    transition: all 0.5s ease-in-out;
+}
