@@ -1,0 +1,148 @@
+/* général */
+body {
+  background-color: #f8f5f0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+/* formulaire */
+form input,
+form select,
+form button {
+  border-radius: 6px;
+}
+
+/* messages d'erreur */
+#errorMessage {
+  color: #dc3545;
+  font-size: 0.9rem;
+}
+
+#errorMessage.show {
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
+#errorMessage.hide {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+/* carte des livres */
+.book-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* grille des livres */
+#bookList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  min-height: 150px;
+}
+
+/* message vide */
+#emptyMessage {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #777;
+  padding: 2rem 0;
+  font-size: 0.95rem;
+}
+
+/* image couverture */
+.book-card img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+/* icône suppression */
+.book-card i.bi-trash {
+  font-size: 1.1rem;
+  color: #dc3545;
+}
+
+/* boutons état de lecture */
+.btn-success {
+  background-color: #198754 !important;
+  border: none;
+}
+.btn-success:hover {
+  background-color: #157347 !important;
+}
+
+.btn-danger {
+  background-color: #dc3545 !important;
+  border: none;
+}
+.btn-danger:hover {
+  background-color: #bb2d3b !important;
+}
+
+/* bouton ajout */
+.btn-primary {
+  background-color: #93441A !important;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #7a3616 !important;
+}
+
+/* bloc filtre */
+#genreSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* style des blocs filtre */
+.filter-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 200px;
+}
+
+/* sélecteurs */
+#genreFilter,
+#bookGenre,
+#secondaryFilter {
+  border-radius: 5px;
+  padding: 0.4rem 0.6rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+  font-size: 0.9rem;
+  max-width: 220px;
+}
+
+/* option par défaut */
+#genreFilter option:first-child {
+  font-weight: bold;
+}
+
+/* pied de page */
+footer {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* carte livre au survol */
+.book-card:hover {
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+}

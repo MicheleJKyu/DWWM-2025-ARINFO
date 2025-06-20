@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestion de Livres</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="/style.css" rel="stylesheet" />
+  <script src="/script.js" defer></script>
+</head>
+<body>
+  <!-- header -->
+  <header class="bg-light py-3 shadow-sm">
+    <div class="container">
+      <h1 class="text-center mb-0" style="color: #93441A; font-weight: bold;">
+        <i class="bi bi-book me-2"></i> Ma Bibliothèque
+      </h1>
+    </div>
+  </header>
+
+  <!-- main -->
+  <main class="container mt-4 mb-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+
+        <!-- formulaire d'ajout -->
+<div class="card mb-4">
+  <div class="card-header" style="background-color: #B67332; color: white;">
+    <h5 class="mb-0">Ajouter un nouveau livre</h5>
+  </div>
+  <div class="card-body">
+    <form id="bookForm">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="bookTitle" class="form-label">Titre du livre</label>
+          <input type="text" class="form-control" id="bookTitle" required />
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="bookAuthor" class="form-label">Auteur</label>
+          <input type="text" class="form-control" id="bookAuthor" required />
+        </div>
+      </div>
+
+      <!-- genre + bouton dans la même ligne -->
+      <div class="row align-items-end mb-3">
+        <div class="col-md-8">
+          <label for="bookGenre" class="form-label">Genre</label>
+          <select id="bookGenre" class="form-select">
+            <option value="all">Tous les genres</option>
+            <!-- genres (voir plus bas si besoin) -->
+            <option value="aventure">Aventure</option>
+            <option value="policier">Policier</option>
+            <option value="thriller">Thriller</option>
+            <option value="suspense">Suspense</option>
+            <option value="espionnage">Espionnage</option>
+            <option value="enquête">Enquête</option>
+            <option value="fantastique">Fantastique</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="science-fiction">Science-fiction</option>
+            <option value="anticipation">Anticipation</option>
+            <option value="uchronie">Uchronie</option>
+            <option value="drame">Drame</option>
+            <option value="historique">Historique</option>
+            <option value="romance">Romance</option>
+            <option value="comédie romantique">Comédie romantique</option>
+            <option value="tranche de vie">Tranche de vie</option>
+            <option value="classique">Classique</option>
+            <option value="contemporain">Contemporain</option>
+            <option value="poésie">Poésie</option>
+            <option value="théâtre">Théâtre</option>
+            <option value="philosophie">Philosophie</option>
+            <option value="essai">Essai</option>
+            <option value="témoignage">Témoignage</option>
+            <option value="journal intime">Journal intime</option>
+            <option value="autobiographie">Autobiographie</option>
+            <option value="biographie">Biographie</option>
+            <option value="récit de voyage">Récit de voyage</option>
+            <option value="développement personnel">Développement personnel</option>
+            <option value="spiritualité">Spiritualité</option>
+            <option value="psychologie">Psychologie</option>
+            <option value="société">Société</option>
+            <option value="politique">Politique</option>
+            <option value="économie">Économie</option>
+            <option value="science">Science</option>
+            <option value="écologie">Écologie</option>
+            <option value="nature">Nature</option>
+            <option value="animaux">Animaux</option>
+            <option value="cuisine">Cuisine</option>
+            <option value="bricolage">Bricolage</option>
+            <option value="jardinage">Jardinage</option>
+            <option value="santé">Santé</option>
+            <option value="bien-être">Bien-être</option>
+            <option value="sport">Sport</option>
+            <option value="art">Art</option>
+            <option value="musique">Musique</option>
+            <option value="peinture">Peinture</option>
+            <option value="cinéma">Cinéma</option>
+            <option value="photographie">Photographie</option>
+            <option value="manga">Manga</option>
+            <option value="bd">Bande dessinée</option>
+            <option value="comics">Comics</option>
+            <option value="album jeunesse">Album jeunesse</option>
+            <option value="roman jeunesse">Roman jeunesse</option>
+            <option value="conte">Conte</option>
+            <option value="légende">Légende</option>
+            <option value="mythologie">Mythologie</option>
+            <option value="fable">Fable</option>
+          </select>
+        </div>
+
+        <!-- bouton placé à droite mais centré visuellement -->
+        <div class="col-md-4 d-flex justify-content-center">
+          <button type="submit" class="btn btn-primary mt-3">
+            <i class="bi bi-plus-circle"></i> Ajouter le livre
+          </button>
+        </div>
+      </div>
+
+    </form>
+    <div id="errorMessage" class="text-danger mt-2" style="display: none;"></div>
+  </div>
+</div>
+
+
+
+        <!-- barre de recherche -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <div class="input-group">
+              <span class="input-group-text">
+                <i class="bi bi-search"></i>
+              </span>
+              <input type="text" class="form-control" id="searchInput" placeholder="Rechercher par titre ou auteur..." />
+            </div>
+          </div>
+        </div>
+
+        <!-- filtres -->
+        <div class="card mb-4">
+          <div class="card-body d-flex flex-wrap gap-4">
+            <div class="filter-block" style="min-width: 200px;">
+              <label for="genreFilter" class="form-label">Filtrer par genre</label>
+              <select id="genreFilter" class="form-select">
+                <option value="all">Tous les genres</option>
+                <option value="aventure">Aventure</option>
+                <option value="policier">Policier</option>
+                <option value="thriller">Thriller</option>
+                <option value="suspense">Suspense</option>
+                <option value="espionnage">Espionnage</option>
+                <option value="enquête">Enquête</option>
+                <option value="fantastique">Fantastique</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="science-fiction">Science-fiction</option>
+                <option value="anticipation">Anticipation</option>
+                <option value="uchronie">Uchronie</option>
+                <option value="drame">Drame</option>
+                <option value="historique">Historique</option>
+                <option value="romance">Romance</option>
+                <option value="comédie romantique">Comédie romantique</option>
+                <option value="tranche de vie">Tranche de vie</option>
+                <option value="classique">Classique</option>
+                <option value="contemporain">Contemporain</option>
+                <option value="poésie">Poésie</option>
+                <option value="théâtre">Théâtre</option>
+                <option value="philosophie">Philosophie</option>
+                <option value="essai">Essai</option>
+                <option value="témoignage">Témoignage</option>
+                <option value="journal intime">Journal intime</option>
+                <option value="autobiographie">Autobiographie</option>
+                <option value="biographie">Biographie</option>
+                <option value="récit de voyage">Récit de voyage</option>
+                <option value="développement personnel">Développement personnel</option>
+                <option value="spiritualité">Spiritualité</option>
+                <option value="psychologie">Psychologie</option>
+                <option value="société">Société</option>
+                <option value="politique">Politique</option>
+                <option value="économie">Économie</option>
+                <option value="science">Science</option>
+                <option value="écologie">Écologie</option>
+                <option value="nature">Nature</option>
+                <option value="animaux">Animaux</option>
+                <option value="cuisine">Cuisine</option>
+                <option value="bricolage">Bricolage</option>
+                <option value="jardinage">Jardinage</option>
+                <option value="santé">Santé</option>
+                <option value="bien-être">Bien-être</option>
+                <option value="sport">Sport</option>
+                <option value="art">Art</option>
+                <option value="musique">Musique</option>
+                <option value="peinture">Peinture</option>
+                <option value="cinéma">Cinéma</option>
+                <option value="photographie">Photographie</option>
+                <option value="manga">Manga</option>
+                <option value="bd">Bande dessinée</option>
+                <option value="comics">Comics</option>
+                <option value="album jeunesse">Album jeunesse</option>
+                <option value="roman jeunesse">Roman jeunesse</option>
+                <option value="conte">Conte</option>
+                <option value="légende">Légende</option>
+                <option value="mythologie">Mythologie</option>
+                <option value="fable">Fable</option>
+              </select>
+            </div>
+
+            <div class="filter-block" style="min-width: 200px;">
+              <label for="sortFilter" class="form-label">Trier par</label>
+              <select id="sortFilter" class="form-select">
+                <option value="none">aucun</option>
+                <option value="titleAZ">titre A → Z</option>
+                <option value="titleZA">titre Z → A</option>
+                <option value="authorAZ">auteur A → Z</option>
+                <option value="authorZA">auteur Z → A</option>
+                <option value="yearAsc">année croissante</option>
+                <option value="yearDesc">année décroissante</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- liste des livres -->
+        <div class="card mb-5" style="background-color: #EEE6D8;">
+        <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-3" style="background-color: #B67332; color: white;">
+            <h5 class="mb-0">Mes livres</h5>
+            <span id="readStats" class="small text-light">0 lu · 0 non lu</span>
+            <span class="badge bg-secondary" id="bookCount">0 livre(s)</span>
+        </div>
+          <div class="card-body">
+            <div id="bookList" class="row g-4">
+              <div class="text-center text-muted py-4" id="emptyMessage">
+                <i class="bi bi-book-half fs-1"></i>
+                <p class="mt-2">Aucun livre dans votre bibliothèque.<br />Commencez par ajouter votre premier livre !</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer class="text-dark text-center py-3 shadow-lg" style="background-color: #EEE6D8;">
+    <div class="container">
+      <p class="mb-0">© 2025 - Michèle J. - Formation Arinfo - Ma Bibliothèque - Gestion de livres personnelle</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
