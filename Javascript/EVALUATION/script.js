@@ -1,12 +1,12 @@
 // tableau des livres
 let books = [];
 
-// sauvegarde locale
+// sauvegarde dans le localStorage
 function saveBooks() {
   localStorage.setItem("myLibrary", JSON.stringify(books));
 }
 
-// chargement depuis localstorage
+// chargement des livres depuis le localStorage
 function loadBooks() {
   const storedBooks = localStorage.getItem("myLibrary");
   if (storedBooks) {
@@ -26,11 +26,13 @@ async function addBook() {
   const author = document.getElementById("bookAuthor").value.trim();
   const genre = document.getElementById("bookGenre")?.value.trim() || "non défini";
 
+  // vérification des champs
   if (title === "" || author === "") {
     showError("veuillez remplir tous les champs.");
     return;
   }
 
+  // doublon interdit (titre + auteur)
   const alreadyExists = books.some(
     (book) =>
       book.title.toLowerCase() === title.toLowerCase() &&
@@ -42,9 +44,11 @@ async function addBook() {
     return;
   }
 
+  // réinitialisation des champs
   document.getElementById("bookTitle").value = "";
   document.getElementById("bookAuthor").value = "";
 
+  // tentative de récupération de l'année de publication
   let publishYear = null;
   try {
     const response = await fetch(`https://openlibrary.org/search.json?title=${encodeURIComponent(title)}&author=${encodeURIComponent(author)}`);
@@ -56,6 +60,7 @@ async function addBook() {
     console.warn("date de publication non récupérée");
   }
 
+  // création de l'objet livre
   const newBook = {
     title,
     author,
@@ -64,12 +69,13 @@ async function addBook() {
     createdYear: publishYear || null
   };
 
+  // ajout + mise à jour
   books.push(newBook);
   saveBooks();
   displayBooks();
 }
 
-// message d’erreur
+// message d’erreur temporaire
 function showError(message) {
   const errorDiv = document.getElementById("errorMessage");
   errorDiv.textContent = message;
@@ -86,17 +92,19 @@ function showError(message) {
   }, 15000);
 }
 
-// affichage des livres
+// affichage visuel des livres
 function displayBooks(filteredList = books) {
   const bookList = document.getElementById("bookList");
   bookList.classList.add("book-grid");
   bookList.innerHTML = "";
 
+  // filtrage par genre
   const selectedGenre = document.getElementById("genreFilter")?.value || "all";
   if (selectedGenre !== "all") {
     filteredList = filteredList.filter((book) => book.genre === selectedGenre);
   }
 
+  // tri des livres
   const sortValue = document.getElementById("sortFilter")?.value || "none";
   if (sortValue === "titleAZ") {
     filteredList.sort((a, b) => a.title.localeCompare(b.title));
@@ -112,6 +120,7 @@ function displayBooks(filteredList = books) {
     filteredList.sort((a, b) => (b.createdYear || 0) - (a.createdYear || 0));
   }
 
+  // affichage de chaque livre avec une boucle
   filteredList.forEach((book) => {
     const bookItem = document.createElement("div");
     bookItem.className = "book-card";
@@ -158,6 +167,7 @@ function displayBooks(filteredList = books) {
     bookList.appendChild(bookItem);
   });
 
+  // mise à jour des compteurs
   document.getElementById("bookCount").textContent = `${books.length} livre(s)`;
 
   const emptyMessage = document.getElementById("emptyMessage");
@@ -170,11 +180,13 @@ function displayBooks(filteredList = books) {
   document.getElementById("readStats").textContent = `${readCount} lu · ${unreadCount} non lu`;
 }
 
-// au chargement
+// exécution au chargement
 document.addEventListener("DOMContentLoaded", () => {
+  // initialisation
   loadBooks();
   displayBooks();
 
+  // recherche dynamique
   document.getElementById("searchInput").addEventListener("input", function () {
     const query = this.value.toLowerCase();
     const filteredBooks = books.filter(
@@ -185,11 +197,13 @@ document.addEventListener("DOMContentLoaded", () => {
     displayBooks(filteredBooks);
   });
 
+  // soumission du formulaire
   document.getElementById("bookForm").addEventListener("submit", function (event) {
     event.preventDefault();
     addBook();
   });
 
+  // filtre genre
   const genreFilter = document.getElementById("genreFilter");
   if (genreFilter) {
     genreFilter.addEventListener("change", () => {
@@ -197,6 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // filtre de tri
   const sortFilter = document.getElementById("sortFilter");
   if (sortFilter) {
     sortFilter.addEventListener("change", () => {
